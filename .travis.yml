@@ -6,4 +6,4 @@ before_install:
   - docker build -t elrajdocker/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run elrajdocker/docker-react npm run test -- --coverage
+  - docker run -e CI=true elrajdocker/docker-react npm run test -- --coverage

